@@ -1,0 +1,19 @@
+{
+  "title": "massive-binary-sim: a physically-traceable simulation framework for a bound pair of massive stars",
+  "description": "A modular framework for the evolution of a gravitationally bound pair of massive stars (8-150 solar masses each). Every equation is traceable to a cited source; competing physical prescriptions are selectable at runtime; every coefficient is exposed with its literature range. Ships a validation suite against analytic solutions and the Hulse-Taylor pulsar (orbital decay reproduced to 0.02%). The stellar-evolution component uses reduced fitting relations rather than a stellar-structure integration and the binary mass-transfer treatment is heuristic; see KNOWN_GAPS.md. Best suited as a teaching tool and for scoping which physics matters before a detailed population-synthesis run.",
+  "license": "MIT",
+  "upload_type": "software",
+  "keywords": [
+    "astrophysics",
+    "binary stars",
+    "stellar evolution",
+    "gravitational waves",
+    "compact objects",
+    "post-Newtonian dynamics",
+    "common envelope",
+    "population synthesis"
+  ],
+  "creators": [
+    { "name": "Belal, Rezan" }
+  ]
+}

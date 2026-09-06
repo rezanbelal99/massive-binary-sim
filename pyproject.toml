@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "massive-binary-sim"
+version = "0.1.0"
+description = "Scientifically-traceable simulation framework for a gravitationally bound pair of massive stars"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "massive-binary-sim contributors" }]
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "matplotlib>=3.7",
+    "astropy>=5.3",
+    "pyyaml>=6.0",
+    "h5py>=3.8",
+]
+
+[project.optional-dependencies]
+sensitivity = ["SALib>=1.4"]
+dev = ["pytest>=7", "pytest-cov"]
+
+[project.scripts]
+mbsim = "massive_binary_sim.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning"]
+markers = ["slow: long-running (convergence, full sensitivity)"]

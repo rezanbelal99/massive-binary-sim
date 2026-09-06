@@ -1,0 +1,66 @@
+# =============================================================================
+# massive-binary-sim  --  default configuration
+# Every free parameter carries {value, range, ref}.  A parameter whose range or
+# provenance is not citable is marked ref: UNVERIFIED  (see KNOWN_GAPS.md).
+# =============================================================================
+
+system:
+  m1: 35.0                 # M_sun   (range 8-150; primary = initially more massive)
+  m2: 25.0                 # M_sun
+  separation: 50.0         # R_sun   (mutually exclusive with `period`)
+  period: null             # days    (if set, overrides `separation`)
+  eccentricity: 0.05
+  metallicity: 0.0142      # mass fraction Z  (Z_sun ~ 0.0134 AGSS09; 0.0142 protosolar)
+  spin1: 0.0               # Omega / Omega_crit
+  spin2: 0.0
+  max_age: null            # M_sun-track age cap in Myr; null = evolve to first remnant
+
+theories:                  # ---- the prescription switchboard ----
+  gravity: "2.5PN"         # newtonian | 1PN | 2PN | 2.5PN | 3.5PN | mond
+  wind: "vink2001"         # vink2001 | bjorklund2021 | nugis2000 | dejager1988 | auto
+  convection: "ledoux"     # schwarzschild | ledoux
+  overshoot: "exponential" # none | step | exponential
+  am_transport: "tayler_spruit"   # none | diffusive | tayler_spruit
+  mt_stability: "zeta"     # qcrit | zeta
+  mt_rate: "kolb_ritter"   # ritter | kolb_ritter
+  ce_formalism: "alpha_lambda"    # alpha_lambda | gamma
+  opacity: "kramers"       # electron_scattering | kramers | opal
+  reaction_rates: "reaclib"       # nacre | reaclib
+  sn_engine: "delayed"     # rapid | delayed | direct_collapse
+  tides: "hut1981"         # none | hut1981 | zahn
+  structure_fidelity: "semi_analytic"  # semi_analytic | polytrope | onedim
+  third_body: false        # Kozai-Lidov secular perturbation
+
+free_parameters:
+  alpha_mlt:      {value: 1.82,  range: [1.5, 2.2],    ref: "solar-model calibrated; e.g. Magic+ 2015 A&A 573 A89"}
+  f_overshoot:    {value: 0.019, range: [0.0, 0.04],   ref: "Brott+ 2011 A&A 530 A115; Claret & Torres 2018 ApJ 859 100"}
+  f0_overshoot:   {value: 0.005, range: [0.0, 0.01],   ref: "Herwig 2000 A&A 360 952 (exponential-diffusive)"}
+  alpha_sc:       {value: 1.0,   range: [0.001, 100.0], ref: "Langer+ 1983 A&A 126 207 -- essentially unconstrained"}
+  eta_wind:       {value: 1.0,   range: [0.1, 3.0],    ref: "overall mass-loss multiplier (convention)"}
+  clumping:       {value: 1.0,   range: [1.0, 10.0],   ref: "wind clumping factor; Vink 2001 rates assume smooth"}
+  beta_accretion: {value: 0.5,   range: [0.0, 1.0],    ref: "fraction retained; poorly constrained, see Petrovic+ 2005"}
+  gamma_amloss:   {value: 1.3,   range: [1.0, 4.0],    ref: "specific AM of non-conservative outflow; Nelemans+ 2000 A&A 360 1011"}
+  alpha_ce:       {value: 1.0,   range: [0.1, 10.0],   ref: "CE efficiency; Ivanova+ 2013 A&ARv 21 59"}
+  lambda_ce:      {value: 0.5,   range: [0.05, 2.0],   ref: "envelope structure param; Xu & Li 2010 ApJ 716 114; Dewi & Tauris 2000"}
+  c12_ag_rate:    {value: 1.0,   range: [0.6, 1.6],    ref: "multiplier on 12C(a,g)16O S-factor; deBoer+ 2017 RvMP 89 035007"}
+  kick_sigma:     {value: 265.0, range: [0.0, 400.0],  ref: "Hobbs+ 2005 MNRAS 360 974 (km/s, Maxwellian 1D sigma)"}
+  overshoot_step: {value: 0.335, range: [0.0, 0.5],    ref: "step overshoot in H_p; Schaller+ 1992 / Ekstrom+ 2012"}
+
+numerics:
+  orbit_integrator: "ias15"     # ias15 | dop853 | wisdom_holman | leapfrog
+  secular_integrator: "dop853"  # dop853 | radau
+  network_integrator: "radau"   # radau | bdf
+  rtol: 1.0e-10
+  atol: 1.0e-12
+  max_time: 6.0e7            # yr  (evolution driver hard cap)
+  energy_drift_tol: 1.0e-6      # relative; driver warns above this
+  am_drift_tol: 1.0e-6
+  min_dt: 1.0e-3                # yr
+  max_dt: 1.0e5                # yr
+  seed: 42
+
+output:
+  dir: "outputs"
+  hdf5_name: "run.h5"
+  make_figures: true
+  figure_format: "png"

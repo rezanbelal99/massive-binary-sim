@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "massive-binary-sim: a physically-traceable simulation framework for a bound pair of massive stars"
+abstract: >-
+  A modular framework for the evolution of a gravitationally bound pair of
+  massive stars (8-150 solar masses each). Every equation is traceable to a
+  cited source; competing physical prescriptions (winds, convection, mass
+  transfer stability, common-envelope formalism, supernova engine, gravity
+  order) are selectable at runtime; every coefficient is exposed with its
+  literature range. Ships a validation suite against analytic solutions and
+  the Hulse-Taylor pulsar. The stellar-evolution component uses reduced
+  fitting relations, not a stellar-structure integration; see KNOWN_GAPS.md.
+type: software
+authors:
+  - family-names: Belal
+    given-names: Rezan
+    orcid: ""
+version: 0.1.0
+date-released: 2026-09-06
+license: MIT
+keywords:
+  - astrophysics
+  - binary stars
+  - stellar evolution
+  - gravitational waves
+  - compact objects
+  - population synthesis
+repository-code: "https://github.com/rezanbelal99/massive-binary-sim"
