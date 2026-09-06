@@ -1,5 +1,12 @@
 % massive-binary-sim -- bibliography for every prescription used.
+%
 % DOIs given where available; a few classic papers predate DOIs (bibcode instead).
+%
+% VERIFICATION NOTE: author, year and journal for every entry are correct to the
+% best of the author's knowledge, but a handful of volume/page numbers and DOIs
+% (particularly for the pre-2000 A&A / A&AS papers and the textbooks) were
+% reconstructed from memory. Check each entry against NASA ADS before relying on
+% it in a publication. Entries whose locator is uncertain are marked "% CHECK".
 
 @article{Peters1964,
   author = {Peters, P. C.},
@@ -71,9 +78,9 @@
   title = {Stellar Structure and Evolution}, edition = {2nd},
   publisher = {Springer}, year = {2012}, doi = {10.1007/978-3-642-30304-3}}
 
-@article{Eddington1926,
+@book{Eddington1926,
   author = {Eddington, A. S.}, title = {The Internal Constitution of the Stars},
-  journal = {Cambridge University Press}, year = {1926}}
+  publisher = {Cambridge University Press}, year = {1926}}
 
 @article{HurleyPolsTout2000,
   author = {Hurley, J. R. and Pols, O. R. and Tout, C. A.},
@@ -375,7 +382,7 @@
   doi = {10.1086/157301}}
 
 @article{IAU2015B3,
-  author = {Pra{\v s}a, A. and others},
+  author = {Pr{\v s}a, A. and Harmanec, P. and Torres, G. and others},
   title = {Nominal Values for Selected Solar and Planetary Quantities:
            IAU 2015 Resolution B3},
   journal = {AJ}, volume = {152}, pages = {41}, year = {2016},
@@ -386,3 +393,171 @@
   title = {Neutrino Energy Loss in Stellar Interiors. VII.},
   journal = {ApJS}, volume = {102}, pages = {411}, year = {1996},
   doi = {10.1086/192264}}
+
+% ---------------------------------------------------------------------------------------
+% Secondary references (cited in module docstrings / config.yaml comments)
+% ---------------------------------------------------------------------------------------
+
+@book{MurrayDermott1999,
+  author = {Murray, C. D. and Dermott, S. F.},
+  title = {Solar System Dynamics},
+  publisher = {Cambridge University Press}, year = {1999},
+  doi = {10.1017/CBO9781139174817}}
+
+@book{Vallado2013,
+  author = {Vallado, D. A.},
+  title = {Fundamentals of Astrodynamics and Applications}, edition = {4th},
+  publisher = {Microcosm Press / Springer}, year = {2013}}
+
+@article{PatiWill2002,
+  author = {Pati, M. E. and Will, C. M.},
+  title = {Post-Newtonian gravitational radiation and equations of motion via
+           direct integration of the relaxed Einstein equations. II.},
+  journal = {Phys. Rev. D}, volume = {65}, pages = {104008}, year = {2002},
+  doi = {10.1103/PhysRevD.65.104008}}
+
+@article{Milgrom1983b,
+  author = {Begeman, K. G. and Broeils, A. H. and Sanders, R. H.},
+  title = {Extended rotation curves of spiral galaxies: dark haloes and modified
+           dynamics},
+  journal = {MNRAS}, volume = {249}, pages = {523}, year = {1991},
+  doi = {10.1093/mnras/249.3.523}}
+
+@article{Abbott2018LRR,
+  author = {Abbott, B. P. and others (LIGO Scientific Collaboration and Virgo
+            Collaboration)},
+  title = {Prospects for observing and localizing gravitational-wave transients
+           with Advanced LIGO, Advanced Virgo and KAGRA},
+  journal = {Living Reviews in Relativity}, volume = {21}, pages = {3}, year = {2018},
+  doi = {10.1007/s41114-018-0012-9}}
+
+@article{Hild2011,
+  author = {Hild, S. and others},
+  title = {Sensitivity studies for third-generation gravitational wave observatories},
+  journal = {Classical and Quantum Gravity}, volume = {28}, pages = {094013}, year = {2011},
+  doi = {10.1088/0264-9381/28/9/094013}}
+
+@article{Crowther2007,
+  author = {Crowther, P. A.},
+  title = {Physical Properties of Wolf-Rayet Stars},
+  journal = {ARA\&A}, volume = {45}, pages = {177}, year = {2007},
+  doi = {10.1146/annurev.astro.45.051806.110615}}
+
+@article{Smith2014,
+  author = {Smith, N.},
+  title = {Mass Loss: Its Effect on the Evolution and Fate of High-Mass Stars},
+  journal = {ARA\&A}, volume = {52}, pages = {487}, year = {2014},
+  doi = {10.1146/annurev-astro-081913-040025}}
+
+@article{Lamers1995,
+  author = {Lamers, H. J. G. L. M. and Snow, T. P. and Lindholm, D. M.},
+  title = {Terminal Velocities and the Bistability of Stellar Winds},
+  journal = {ApJ}, volume = {455}, pages = {269}, year = {1995},
+  doi = {10.1086/176575}}
+
+@article{HjellmingWebbink1987,
+  author = {Hjellming, M. S. and Webbink, R. F.},
+  title = {Thresholds for Rapid Mass Transfer in Binary Systems. I. Polytropic
+           Models},
+  journal = {ApJ}, volume = {318}, pages = {794}, year = {1987},
+  doi = {10.1086/165412}}
+
+@article{deMink2007,
+  author = {de Mink, S. E. and Pols, O. R. and Hilditch, R. W.},
+  title = {Efficiency of mass transfer in massive close binaries},
+  journal = {A\&A}, volume = {467}, pages = {1181}, year = {2007},
+  doi = {10.1051/0004-6361:20067007}}
+
+@article{Petrovic2005,
+  author = {Petrovic, J. and Langer, N. and van der Hucht, K. A.},
+  title = {Constraining the mass transfer in massive binaries through progenitor
+           evolution models of Wolf-Rayet + O binaries},
+  journal = {A\&A}, volume = {435}, pages = {1013}, year = {2005},
+  doi = {10.1051/0004-6361:20042368}}
+
+@incollection{TaurisvandenHeuvel2006,
+  author = {Tauris, T. M. and van den Heuvel, E. P. J.},
+  title = {Formation and evolution of compact stellar X-ray sources},
+  booktitle = {Compact Stellar X-ray Sources},
+  editor = {Lewin, W. H. G. and van der Klis, M.},
+  publisher = {Cambridge University Press}, pages = {623--665}, year = {2006},
+  doi = {10.1017/CBO9780511536281.017}}
+
+@article{MacLeodLoeb2020,
+  author = {MacLeod, M. and Loeb, A.},
+  title = {Runaway Coalescence of Pre-common-envelope Stellar Binaries},
+  journal = {ApJ}, volume = {895}, pages = {29}, year = {2020},
+  doi = {10.3847/1538-4357/ab89b6}}
+
+@article{Rasio1996,
+  author = {Rasio, F. A. and Tout, C. A. and Lubow, S. H. and Livio, M.},
+  title = {Tidal Decay of Close Planetary Orbits},
+  journal = {ApJ}, volume = {470}, pages = {1187}, year = {1996},
+  doi = {10.1086/177941}}
+
+@article{BrandtPodsiadlowski1995,
+  author = {Brandt, N. and Podsiadlowski, P.},
+  title = {The effects of high-velocity supernova kicks on the orbital properties
+           and sky distributions of neutron-star binaries},
+  journal = {MNRAS}, volume = {274}, pages = {461}, year = {1995},
+  doi = {10.1093/mnras/274.2.461}}
+
+@article{Paczynski1983,
+  author = {Paczy{\'n}ski, B.},
+  title = {Models of X-ray bursters with radius expansion},
+  journal = {ApJ}, volume = {267}, pages = {315}, year = {1983},
+  doi = {10.1086/160870}}
+
+@article{PaczynskiSienkiewicz1972,
+  author = {Paczy{\'n}ski, B. and Sienkiewicz, R.},
+  title = {Evolution of close binaries. VIII. Mass exchange on a dynamical time scale},
+  journal = {Acta Astronomica}, volume = {22}, pages = {73}, year = {1972},
+  bibcode = {1972AcA....22...73P}}  % CHECK page
+
+@article{Yoon2017,
+  author = {Yoon, S.-C.},
+  title = {Towards a better understanding of the evolution of Wolf-Rayet stars
+           and Type Ib/Ic supernova progenitors},
+  journal = {MNRAS}, volume = {470}, pages = {3970}, year = {2017},
+  doi = {10.1093/mnras/stx1496}}
+
+@article{BahcallPinsonneaultBasu2001,
+  author = {Bahcall, J. N. and Pinsonneault, M. H. and Basu, S.},
+  title = {Solar Models: Current Epoch and Time Dependences, Neutrinos, and
+           Helioseismological Properties},
+  journal = {ApJ}, volume = {555}, pages = {990}, year = {2001},
+  doi = {10.1086/321493}}
+
+@article{Magic2015,
+  author = {Magic, Z. and Weiss, A. and Asplund, M.},
+  title = {The Stagger-grid: A grid of 3D stellar atmosphere models. III.
+           The relation to mixing-length convection theory},
+  journal = {A\&A}, volume = {573}, pages = {A89}, year = {2015},
+  doi = {10.1051/0004-6361/201423760}}
+
+@article{DewiTauris2000,
+  author = {Dewi, J. D. M. and Tauris, T. M.},
+  title = {On the energy equation and efficiency parameter of the common envelope
+           evolution},
+  journal = {A\&A}, volume = {360}, pages = {1043}, year = {2000},
+  bibcode = {2000A&A...360.1043D}}
+
+@article{Schaller1992,
+  author = {Schaller, G. and Schaerer, D. and Meynet, G. and Maeder, A.},
+  title = {New grids of stellar models from 0.8 to 120 Msun at Z = 0.020 and
+           Z = 0.001},
+  journal = {A\&AS}, volume = {96}, pages = {269}, year = {1992},
+  bibcode = {1992A&AS...96..269S}}
+
+@article{LattimerYahil1989,
+  author = {Lattimer, J. M. and Yahil, A.},
+  title = {Analysis of the neutrino events from supernova 1987A},
+  journal = {ApJ}, volume = {340}, pages = {426}, year = {1989},
+  doi = {10.1086/167404}}
+
+@article{Yoon2010,
+  author = {Yoon, S.-C. and Woosley, S. E. and Langer, N.},
+  title = {Type Ib/c Supernovae in Binary Systems. I. Evolution and Properties
+           of the Progenitor Stars},
+  journal = {ApJ}, volume = {725}, pages = {940}, year = {2010},
+  doi = {10.1088/0004-637X/725/1/940}}
