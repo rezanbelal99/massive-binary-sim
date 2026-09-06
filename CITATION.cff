@@ -17,6 +17,14 @@ authors:
     orcid: ""
 version: 0.1.0
 date-released: 2026-09-06
+doi: 10.5281/zenodo.22555588
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22555588
+    description: Concept DOI (resolves to the latest version)
+  - type: doi
+    value: 10.5281/zenodo.22555589
+    description: DOI for version 0.1.0
 license: MIT
 keywords:
   - astrophysics

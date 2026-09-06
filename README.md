@@ -1,5 +1,8 @@
 # massive-binary-sim
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22555588.svg)](https://doi.org/10.5281/zenodo.22555588)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 > **Status: educational / research-scoping tool.** The gravitational-dynamics and
 > GW core is validated to research grade (Hulse–Taylor orbital decay reproduced to
 > 0.02%, machine-precision Kepler closure). The single-star evolution uses reduced
@@ -122,3 +125,15 @@ evolution, no magnetic fields beyond the AM-transport toggle, a qualitative GW
 waveform. The scientific output is a **mapped dependence** of the outcome on
 prescription choice and free parameters (RESULTS.md §6–7), not a single number.
 Read [`KNOWN_GAPS.md`](KNOWN_GAPS.md) before using any result quantitatively.
+
+## Citation
+
+If you use this software, cite the archived release:
+
+> Belal, R. (2026). *massive-binary-sim: a physically-traceable simulation
+> framework for a bound pair of massive stars* (v0.1.0). Zenodo.
+> https://doi.org/10.5281/zenodo.22555588
+
+Concept DOI (always latest): [`10.5281/zenodo.22555588`](https://doi.org/10.5281/zenodo.22555588)
+· v0.1.0 DOI: [`10.5281/zenodo.22555589`](https://doi.org/10.5281/zenodo.22555589)
+· machine-readable metadata in [`CITATION.cff`](CITATION.cff).
